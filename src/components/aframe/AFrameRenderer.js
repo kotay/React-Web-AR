@@ -8,7 +8,8 @@ const PARAMETERS = [
   "matrixCodeType",
   "cameraParametersUrl",
   "maxDetectionRate",
-
+  "patternRatio",
+  
   // Source configuration
   "sourceType",
   "sourceUrl",
