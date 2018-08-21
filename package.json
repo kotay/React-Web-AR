@@ -27,7 +27,6 @@
     "aframe-react": "^4.3.0"
   },
   "scripts": {
-    "precommit": "lint-staged",
     "build":
       "NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack/webpack.config.prod.js --progress",
     "start":
