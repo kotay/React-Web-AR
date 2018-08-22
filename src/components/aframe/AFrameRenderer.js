@@ -9,7 +9,8 @@ const PARAMETERS = [
   "cameraParametersUrl",
   "maxDetectionRate",
   "patternRatio",
-  
+  "debug",
+
   // Source configuration
   "sourceType",
   "sourceUrl",
@@ -32,19 +33,19 @@ const PARAMETERS = [
 
 /**
  * AFrameRenderer
- * 
+ *
  * Render aframe.io primitives using a single marker
- * 
+ *
  * Use multiple markers (independent) and render different objects
- * 
+ *
  * Use camera as an entity or use cameraTransformMatrix (camera movement)
- *  
- * Can also render aframe.io bindings for React (WebVR) 
+ *
+ * Can also render aframe.io bindings for React (WebVR)
  *
  * Bugs/Errors to patch:
- * 
+ *
  * AR.js gives this error 'THREEx.ArMarkerControls: 'markersAreaEnabled' is not a property of this material.'
- * 
+ *
  * Why ?
  * - Composition
  * - DRY code
@@ -59,6 +60,7 @@ export default class AFrameRenderer extends Component {
       sourceType: PropTypes.string,
       sourceUrl: PropTypes.string,
       debugUIEnabled: PropTypes.bool,
+      debug: PropTypes.bool,
       detectionMode: PropTypes.string,
       matrixCodeType: PropTypes.string,
       cameraParametersUrl: PropTypes.string,
@@ -68,7 +70,8 @@ export default class AFrameRenderer extends Component {
       displayWidth: PropTypes.number,
       displayHeight: PropTypes.number,
       canvasWidth: PropTypes.number,
-      canvasHeight: PropTypes.number
+      canvasHeight: PropTypes.number,
+      patternRatio: PropTypes.number
     }),
     getSceneRef: PropTypes.func,
     inherent: PropTypes.bool
